@@ -715,12 +715,14 @@ a {
   .gallery-grid { grid-auto-rows: 14.375rem; }
 }
 .gallery-cell { height: 100%; }
-.gallery-cell.span-2x2 {
-  grid-column: span 2;
-  grid-row: span 2;
-}
-.gallery-cell.span-2 {
-  grid-column: span 2;
+@media (min-width: 640px) {
+  .gallery-cell.span-2x2 {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+  .gallery-cell.span-2 {
+    grid-column: span 2;
+  }
 }
 .gallery-btn {
   position: relative;
