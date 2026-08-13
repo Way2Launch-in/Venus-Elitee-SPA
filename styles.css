@@ -1013,11 +1013,9 @@ select.field-input { appearance: none; }
   z-index: 50;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0rem;
   border-radius: 9999px;
-  padding: 0.875rem 1rem;
-  font-size: 0.75rem;
-  font-weight: 500;
+  padding: 0.5rem 0.5rem;
   text-transform: uppercase;
   letter-spacing: 0.14em;
   color: #fff; /* white text on black */
@@ -1026,7 +1024,7 @@ select.field-input { appearance: none; }
   transition: transform 0.2s ease;
 }
 .floating-logo img {
-  height: 1.5rem; /* adjust logo size */
+  height: 0.8rem; /* adjust logo size */
   width: auto;
 }
 
