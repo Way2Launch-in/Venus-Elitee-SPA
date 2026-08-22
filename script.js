@@ -30,26 +30,27 @@
   /* ---------- data (mirrors components) ---------- */
   var SERVICES = [
     {
-      icon: "flower2",
+      icon: "leaf",
       img: "assets/s1.jpeg",
-      title: "Relaxing Aroma Massage",
-      description: "A soothing full-body massage using aromatic essential oils to calm the mind and rejuvenate the body.",
+      title: "Jacuzzi Massage",
+      description: "Indulge in the ultimate spa experience with warm bubbling water, soothing aromatherapy and expert touch to melt away stress and refresh your body & mind.",
       durations: [
-        { minutes: 60, price: 2000 },
-        { minutes: 90, price: 3000 }
+        { minutes: 60, price: 8000 },
+        { minutes: 90, price: 10000 }
       ],
-      tags: ["Aroma Therapy", "Full Body", "Relaxation"]
+      highlights: ["Warm Jacuzzi Therapy", "Aromatherapy", "Expert Massage", "Romantic Ambiance"],
+      tags: ["Couple Experience", "Calming Ambience", "Premium Comfort"]
     },
     {
-      icon: "leaf",
+      icon: "gem",
       img: "assets/s2.jpeg",
-      title: "Balinese Massage",
-      description: "A traditional Balinese massage that combines gentle stretches, acupressure, and aromatherapy to relieve tension, improve circulation, and restore balance.",
+      title: "Signature Massage",
+      description: "Our exclusive Venus Elitee therapy designed to deeply relax muscles, improve circulation and rejuvenate the body with premium spa techniques.",
       durations: [
-        { minutes: 60, price: 2500 },
-        { minutes: 90, price: 3000 }
+        { minutes: 60, price: 5000 },
+        { minutes: 90, price: 7000 }
       ],
-      tags: ["Aromatherapy Oils", "Relax & Unwind", "Rejuvenate"]
+      tags: ["Exclusive Therapy", "Four Hands", "Premium Spa"]
     },
     {
       icon: "sparkles",
@@ -74,8 +75,30 @@
       tags: ["Therapeutic", "Deep Muscle", "Pain Relief"]
     },
     {
-      icon: "waves",
+      icon: "leaf",
       img: "assets/s5.jpeg",
+      title: "Balinese Massage",
+      description: "A traditional Balinese massage that combines gentle stretches, acupressure, and aromatherapy to relieve tension, improve circulation, and restore balance.",
+      durations: [
+        { minutes: 60, price: 2500 },
+        { minutes: 90, price: 3000 }
+      ],
+      tags: ["Aromatherapy Oils", "Relax & Unwind", "Rejuvenate"]
+    },
+    {
+      icon: "flower2",
+      img: "assets/s6.jpeg",
+      title: "Swedish Massage",
+      description: "A classic relaxation therapy using long, smooth strokes, kneading, and circular movements to ease muscle tension, improve blood flow, and promote full-body wellness.",
+      durations: [
+        { minutes: 60, price: 2000 },
+        { minutes: 90, price: 3000 }
+      ],
+      tags: ["Classic Therapy", "Full Body", "Relaxation"]
+    },
+    {
+      icon: "waves",
+      img: "assets/s7.jpeg",
       title: "Couple Massage",
       description: "Enjoy a relaxing massage together in a serene spa setting.",
       durations: [
@@ -85,27 +108,15 @@
       tags: ["Couple Experience", "Serene Setting"]
     },
     {
-      icon: "gem",
-      img: "assets/s6.jpeg",
-      title: "Signature Massage",
-      description: "Our exclusive Venus Elitee therapy designed to deeply relax muscles, improve circulation and rejuvenate the body with premium spa techniques.",
+      icon: "flower2",
+      img: "assets/s8.jpeg",
+      title: "Relaxing Aroma Massage",
+      description: "A soothing full-body massage using aromatic essential oils to calm the mind and rejuvenate the body.",
       durations: [
-        { minutes: 60, price: 5000 },
-        { minutes: 90, price: 7000 }
+        { minutes: 60, price: 2000 },
+        { minutes: 90, price: 3000 }
       ],
-      tags: ["Exclusive Therapy", "Four Hands", "Premium Spa"]
-    },
-    {
-      icon: "leaf",
-      img: "assets/s7.jpeg",
-      title: "Jacuzzi Massage",
-      description: "Indulge in the ultimate spa experience with warm bubbling water, soothing aromatherapy and expert touch to melt away stress and refresh your body & mind.",
-      durations: [
-        { minutes: 60, price: 8000 },
-        { minutes: 90, price: 10000 }
-      ],
-      highlights: ["Warm Jacuzzi Therapy", "Aromatherapy", "Expert Massage", "Romantic Ambiance"],
-      tags: ["Couple Experience", "Calming Ambience", "Premium Comfort"]
+      tags: ["Aroma Therapy", "Full Body", "Relaxation"]
     }
   ];
 
@@ -129,13 +140,14 @@
   ];
 
   var SERVICE_OPTIONS = [
-    "Relaxing Aroma Massage",
-    "Balinese Massage",
+    "Jacuzzi Massage",
+    "Signature Massage",
     "Thai Massage",
     "Deep Tissue Massage",
+    "Balinese Massage",
+    "Swedish Massage",
     "Couple Massage",
-    "Signature Massage",
-    "Jacuzzi Massage",
+    "Relaxing Aroma Massage",
     "Not sure yet",
   ];
 
