@@ -1102,6 +1102,26 @@ select.field-input { appearance: none; }
 .footer-links { margin-top: 1rem; display: grid; gap: 0.5rem; font-size: 0.875rem; list-style: none; padding: 0; }
 .footer-link { color: var(--muted-foreground); transition: color 0.2s ease; }
 .footer-link:hover { color: var(--primary); }
+.footer-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.footer-link .ico,
+.btn-outline-sm .ico {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+}
+.btn-outline-sm {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+}
 .footer-link-static { color: var(--muted-foreground); margin: 0; }
 .footer-bottom { padding-top: 1.5rem; text-align: center; font-size: 0.75rem; color: var(--muted-foreground); }
 .footer-credit {
