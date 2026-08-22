@@ -7,8 +7,13 @@
   /* ---------- business config (mirrors src/lib/spa.ts) ---------- */
   var SPA = {
     name: "Venus Elitee Spa",
-    phone: "+91 99166 63605",
-    tel: "tel:+919916663605",
+    phone: "+91 87939 69830",
+    tel: "tel:+918793969830",
+    hours: {
+      open: "10:30",
+      close: "21:00",
+      label: "10:30 AM – 9:00 PM",
+    },
     rating: 4.4,
     reviewCount: 9,
     maps:
@@ -16,7 +21,7 @@
   };
 
   function wa(message) {
-    return "https://wa.me/919916663605?text=" + encodeURIComponent(message);
+    return "https://wa.me/918793969830?text=" + encodeURIComponent(message);
   }
   var WA_DEFAULT = wa(
     "Hello Venus Elitee Spa, I would like to know more about your spa services and availability."
@@ -24,12 +29,84 @@
 
   /* ---------- data (mirrors components) ---------- */
   var SERVICES = [
-    { icon: "flower2", img: "assets/s1.jpeg", title: "Relaxation Massage", text: "Gentle, flowing strokes to ease everyday tension and settle the mind." },
-    { icon: "leaf", img: "assets/s2.jpeg", title: "Wellness Massage", text: "A restorative session focused on tired shoulders, back and legs." },
-    { icon: "sparkles", img: "assets/s3.jpeg", title: "Aromatherapy Experience", text: "Warm aromatic oils chosen for calm, balance and a lingering sense of ease." },
-    { icon: "heart", img: "assets/s4.jpeg", title: "Couples Wellness Experience", text: "A private room prepared for two, side by side, at an unhurried pace." },
-    { icon: "waves", img: "assets/s5.jpeg", title: "Full Body Relaxation", text: "A complete head-to-toe session for deep, unhurried rest." },
-    { icon: "gem", img: "assets/s6.jpeg", title: "Premium Spa Experience", text: "Our signature ritual — extended time, premium oils, total privacy." },
+    {
+      icon: "flower2",
+      img: "assets/s1.jpeg",
+      title: "Relaxing Aroma Massage",
+      description: "A soothing full-body massage using aromatic essential oils to calm the mind and rejuvenate the body.",
+      durations: [
+        { minutes: 60, price: 2000 },
+        { minutes: 90, price: 3000 }
+      ],
+      tags: ["Aroma Therapy", "Full Body", "Relaxation"]
+    },
+    {
+      icon: "leaf",
+      img: "assets/s2.jpeg",
+      title: "Balinese Massage",
+      description: "A traditional Balinese massage that combines gentle stretches, acupressure, and aromatherapy to relieve tension, improve circulation, and restore balance.",
+      durations: [
+        { minutes: 60, price: 2500 },
+        { minutes: 90, price: 3000 }
+      ],
+      tags: ["Aromatherapy Oils", "Relax & Unwind", "Rejuvenate"]
+    },
+    {
+      icon: "sparkles",
+      img: "assets/s3.jpeg",
+      title: "Thai Massage",
+      description: "Traditional Thai therapy combining stretching and pressure techniques to improve flexibility, relieve tension and increase energy flow.",
+      durations: [
+        { minutes: 60, price: 3000 },
+        { minutes: 90, price: 4500 }
+      ],
+      tags: ["Traditional Thai", "Stretching", "Flexibility"]
+    },
+    {
+      icon: "heart",
+      img: "assets/s4.jpeg",
+      title: "Deep Tissue Massage",
+      description: "A focused, therapeutic massage that targets deep muscle tension, chronic pain & stiffness.",
+      durations: [
+        { minutes: 60, price: 3000 },
+        { minutes: 90, price: 4000 }
+      ],
+      tags: ["Therapeutic", "Deep Muscle", "Pain Relief"]
+    },
+    {
+      icon: "waves",
+      img: "assets/s5.jpeg",
+      title: "Couple Massage",
+      description: "Enjoy a relaxing massage together in a serene spa setting.",
+      durations: [
+        { minutes: 60, price: 3000 },
+        { minutes: 120, price: 5000 }
+      ],
+      tags: ["Couple Experience", "Serene Setting"]
+    },
+    {
+      icon: "gem",
+      img: "assets/s6.jpeg",
+      title: "Signature Massage",
+      description: "Our exclusive Venus Elitee therapy designed to deeply relax muscles, improve circulation and rejuvenate the body with premium spa techniques.",
+      durations: [
+        { minutes: 60, price: 5000 },
+        { minutes: 90, price: 7000 }
+      ],
+      tags: ["Exclusive Therapy", "Four Hands", "Premium Spa"]
+    },
+    {
+      icon: "leaf",
+      img: "assets/s7.jpeg",
+      title: "Jacuzzi Massage",
+      description: "Indulge in the ultimate spa experience with warm bubbling water, soothing aromatherapy and expert touch to melt away stress and refresh your body & mind.",
+      durations: [
+        { minutes: 60, price: 8000 },
+        { minutes: 90, price: 10000 }
+      ],
+      highlights: ["Warm Jacuzzi Therapy", "Aromatherapy", "Expert Massage", "Romantic Ambiance"],
+      tags: ["Couple Experience", "Calming Ambience", "Premium Comfort"]
+    }
   ];
 
   var WHY = [
@@ -52,12 +129,13 @@
   ];
 
   var SERVICE_OPTIONS = [
-    "Relaxation Massage",
-    "Wellness Massage",
-    "Aromatherapy Experience",
-    "Couples Wellness Experience",
-    "Full Body Relaxation",
-    "Premium Spa Experience",
+    "Relaxing Aroma Massage",
+    "Balinese Massage",
+    "Thai Massage",
+    "Deep Tissue Massage",
+    "Couple Massage",
+    "Signature Massage",
+    "Jacuzzi Massage",
     "Not sure yet",
   ];
 
@@ -94,6 +172,24 @@
       a.rel = "noopener noreferrer";
       a.className = "reveal";
       a.setAttribute("data-reveal", "");
+
+      var durationHtml = s.durations.map(function (d) {
+        return (
+          '<div class="service-duration">' +
+            '<span class="duration-time">' + d.minutes + " Minutes</span>" +
+            '<span class="duration-price">₹' + d.price.toLocaleString("en-IN") + "</span>" +
+          "</div>"
+        );
+      }).join("");
+
+      var tagsHtml = (s.tags || []).map(function (t) {
+        return '<span class="service-tag">' + t + "</span>";
+      }).join("");
+
+      var highlightsHtml = (s.highlights || []).map(function (h) {
+        return '<span class="service-highlight">' + h + "</span>";
+      }).join("");
+
       var card = document.createElement("article");
       card.className = "service-card";
       card.innerHTML =
@@ -102,7 +198,10 @@
         "</div>" +
         '<div class="service-icon">' + svg(s.icon, "ico") + "</div>" +
         '<h3 class="service-title">' + s.title + "</h3>" +
-        '<p class="service-text">' + s.text + "</p>" +
+        '<p class="service-text">' + s.description + "</p>" +
+        (s.highlights && s.highlights.length ? '<div class="service-highlights">' + highlightsHtml + "</div>" : "") +
+        '<div class="service-durations">' + durationHtml + "</div>" +
+        '<div class="service-tags">' + tagsHtml + "</div>" +
         '<span class="service-enquire">' + svg("chat", "ico") + " Enquire on WhatsApp</span>";
       a.appendChild(card);
       grid.appendChild(a);
