@@ -42,17 +42,6 @@
       tags: ["Couple Experience", "Calming Ambience", "Premium Comfort"]
     },
     {
-      icon: "gem",
-      img: "assets/s2.jpeg",
-      title: "Signature Massage",
-      description: "Our exclusive Venus Elitee therapy designed to deeply relax muscles, improve circulation and rejuvenate the body with premium spa techniques.",
-      durations: [
-        { minutes: 60, price: 5000 },
-        { minutes: 90, price: 7000 }
-      ],
-      tags: ["Exclusive Therapy", "Four Hands", "Premium Spa"]
-    },
-    {
       icon: "sparkles",
       img: "assets/s3.jpeg",
       title: "Thai Massage",
@@ -141,7 +130,6 @@
 
   var SERVICE_OPTIONS = [
     "Jacuzzi Massage",
-    "Signature Massage",
     "Thai Massage",
     "Deep Tissue Massage",
     "Balinese Massage",
