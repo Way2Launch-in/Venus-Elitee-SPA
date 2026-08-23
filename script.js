@@ -124,8 +124,7 @@
     { src: "assets/v7.jpeg", alt: "Golden Thai massage room with floor mattress and herbal compress balls", span: "" },
     { src: "assets/v3.jpeg", alt: "Reception lounge with paisley mural, velvet sofas and floral carpet", span: "" },
     { src: "assets/v5.jpeg", alt: "Marble shower area with botanical wallpaper and copper accents", span: "" },
-    { src: "assets/v9.jpeg", alt: "Corridor with leaf-textured walls and violet mood lighting", span: "span-2" },
-    { src: "assets/v8.jpeg", alt: "Venus Elitee Spa exterior signage on the building facade", span: "" },
+        { src: "assets/v8.jpeg", alt: "Venus Elitee Spa exterior signage on the building facade", span: "" },
   ];
 
   var SERVICE_OPTIONS = [

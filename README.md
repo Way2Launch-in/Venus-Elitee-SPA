@@ -16,7 +16,7 @@ venus-elitee-spa/
 │   ├── favicon.png             # Browser tab icon
 │   ├── Company_logo.png        # Way 2 Launch credit logo
 │   ├── s1.jpeg–s6.jpeg         # Service card images (6 total)
-│   └── v2.jpeg–v9.jpeg         # Gallery images (8 total)
+│   └── v2.jpeg, v3.jpeg, v5.jpeg, v6.jpeg, v7.jpeg, v8.jpeg  # Gallery images (6 total)
 └── README.md
 ```
 
