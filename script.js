@@ -7,8 +7,8 @@
   /* ---------- business config (mirrors src/lib/spa.ts) ---------- */
   var SPA = {
     name: "Venus Elitee Spa",
-    phone: "+91 87939 69830",
-    tel: "tel:+918793969830",
+    phone: "+91 84466 47600",
+    tel: "tel:+918446647600",
     hours: {
       open: "10:30",
       close: "21:00",
@@ -21,7 +21,7 @@
   };
 
   function wa(message) {
-    return "https://wa.me/918793969830?text=" + encodeURIComponent(message);
+    return "https://wa.me/918446647600?text=" + encodeURIComponent(message);
   }
   var WA_DEFAULT = wa(
     "Hello Venus Elitee Spa, I would like to know more about your spa services and availability."
