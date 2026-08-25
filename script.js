@@ -115,7 +115,7 @@
     { icon: "sparkles", title: "Comfortable Environment", text: "Freshly prepared linen and tidy, well-kept spaces." },
     { icon: "heart", title: "Wellness Focused", text: "Sessions designed around relaxation and everyday recovery." },
     { icon: "users", title: "Professional Service", text: "Trained therapists, courteous staff, respectful care." },
-    { icon: "pin", title: "Convenient Miraj Location", text: "Glen Avenue, Vantmure Corner — easy to reach and park." },
+    { icon: "pin", title: "Convenient Miraj Location", text: "Glen Avenue Above Croma showroom 8th Floor, Vantmure Corner — easy to reach and park." },
   ];
 
   var PHOTOS = [
